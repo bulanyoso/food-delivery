@@ -1,6 +1,26 @@
+kubectl exec -it httpie -- /bin/bash
+http POST http://10.0.101.221:8080/orders productName="Tea" qty=3
+```
+![image](https://user-images.githubusercontent.com/64818523/106706737-765b6b00-6633-11eb-9e73-48aa1190acdb.png)
+
+- configmap 삭제된 상태에서 Pod와 deploy 상태 확인
+```
+kubectl get all -n coffee
+```
+![image](https://user-images.githubusercontent.com/64818523/106706899-b4588f00-6633-11eb-9670-169421b045ed.png)
+
+- Pod와 상태 상세 확인
+```
+kubectl get pod order-74c76b478-mlpf4 -o yaml -n coffee
+```
+![image](https://user-images.githubusercontent.com/64818523/106706929-c33f4180-6633-11eb-843c-535c0b37904d.png)
+
+
+
 ![image](https://user-images.githubusercontent.com/487999/79708354-29074a80-82fa-11ea-80df-0db3962fb453.png)
 ![image](https://user-images.githubusercontent.com/75309297/103842330-06f86700-50d9-11eb-9920-68d363f4bfc6.png)
 ![image](https://user-images.githubusercontent.com/75309297/106534960-85a9be00-6538-11eb-9578-b916d1f03a97.png)
+
 
 # 예제 - 음식배달
 
